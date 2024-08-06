@@ -29,3 +29,13 @@ function missing_request_parameter(string $param)
     $response->set_error_message('Missing or invalid parameters:  ' . $param);
     $response->response();
 }
+
+function check_requiered_fields_in_json(array $submited_fields, array $required_fields)
+{
+    foreach ($required_fields as $key) {
+        if (!array_key_exists($key, $submited_fields)) {
+            return false;
+        }
+    }
+    return true;
+}
