@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+
+        * {
+            margin-top: 10px;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(168, 5, 5);
+        }
+
+        .ctn1 {
+            border: 1px solid red;
+            width: 50%;
+            padding: 10px;
+        }
+        .ctn1 p {
+            border: 1px solid green;
+            width: 50%;
+            padding: 10px;
+        }
+        .ctn1 span {
+            border: 1px solid blue;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <label>Valor 1</label>
+        <input type="text" id="v1" value="0">
+        <br><br>
+
+        <label>Valor 2</label>
+        <input type="text" id="v2" value="0">
+        <br><br>
+
+        <label>Resultado</label>
+        <input type="text" id="result" value="0">
+        <br><br>
+        <button id="btn_sumjs">Somar Js</button>
+        <button id="btn_sumjq">Somar Jq</button>
+    </div>
+
+    <div>
+        <label for="mirrorText">Digite algo</label>
+        <input class="inputText" name="mirrorText" type="text">
+
+        <p class="resultText"></p>
+    </div>
+
+    <div class="container" style="display: flex;justify-content: space-around;">
+        <div id="box"></div>
+        <div id="box2"></div>
+    </div>
+    <div class="container-text" style="display: flex;justify-content: center;">
+        <p class="txt"></p>
+    </div>
+    
+    <!-- <div class="positions">
+        <p class="positionText"></p>
+    </div> -->
+
+    <!-- <div class="infos">
+        <p class="info1"></p>
+        <p class="info2"></p>
+    </div> -->
+
+    <div class="ctn1">
+        <p>
+        Teste de título
+        <br><br><br>
+        <span>Teste de span</span>
+        </p>
+        
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

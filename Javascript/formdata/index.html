@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" id="form-user">
+        <input type="text" name="firstName">
+        <input type="text" name="lastName">
+        <input type="text" name="email">
+        <button type="submit">Create User</button>
+    </form>
+    
+    <script>
+        const form = document.querySelector('#form-user');
+
+        form.addEventListener('submit', async event => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            const data = await fetch('http://localhost/JavaScript/formdata/form.php', {
+                method: 'POST',
+                mode: 'cors',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            
+
+            
+        })
+    </script>
+</body>
+</html>
