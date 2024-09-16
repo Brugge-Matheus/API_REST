@@ -4,7 +4,7 @@ require_once "../_inc/init.php";
 
 // Check if method is valid
 check_request_method($request_method, 'GET');
-check_integration_key();
+// check_integration_key();
 
 $results = $database->execute_query('SELECT * FROM clientes');
 

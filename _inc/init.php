@@ -21,29 +21,31 @@ if (!API_ACTIVATE) {
 
 $request_method = $_SERVER['REQUEST_METHOD'];
 
-if (!isset($_SERVER['PHP_AUTH_USER'])) {
-    $response->set_status('error');
-    $response->set_error_message('Missing authentication credentials');
-    $response->response();
-}
+// if (!isset($_SERVER['PHP_AUTH_USER'])) {
+//     $response->set_status('error');
+//     $response->set_error_message('Missing authentication credentials');
+//     $response->response();
+// }
 
 $database = new Database(MYSQL_CONFIG);
 
-$username = $_SERVER['PHP_AUTH_USER'];
-$password = $_SERVER['PHP_AUTH_PW'];
-$params = [
-    ':username' => $username
-];
+// $username = $_SERVER['PHP_AUTH_USER'];
+// $password = $_SERVER['PHP_AUTH_PW'];
+// $params = [
+//     ':username' => $username
+// ];
 
-$results = $database->execute_query("SELECT * FROM users WHERE username = :username", $params);
-if ($results->affected_rows === 0) {
-    $response->set_status('error');
-    $response->set_error_message('Invalid Credentials');
-    $response->response();
-}
+// $results = $database->execute_query("SELECT * FROM users WHERE username = :username", $params);
+// if ($results->affected_rows === 0) {
+//     $response->set_status('error');
+//     $response->set_error_message('Invalid Credentials');
+//     $response->response();
+// }
 
-if (!password_verify($password, $results->results[0]->passwrd)) {
-    $response->set_status('error');
-    $response->set_error_message('Invalid Credentials');
-    $response->response();
-}
+// if (!password_verify($password, $results->results[0]->passwrd)) {
+//     $response->set_status('error');
+//     $response->set_error_message('Invalid Credentials');
+//     $response->response();
+// }
+
+// comentarios adicionados para retirar o basic auth
