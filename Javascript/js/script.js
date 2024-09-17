@@ -66,3 +66,24 @@ $('.ctn1 span').click(event => {
     event.stopPropagation();
     alert('clique feito no span');
 });
+
+// Jquery parent selector
+// $('h4').parentsUntil('div').css({'border': '1px solid #f00'});
+// // $('li').parents().css({'border': '1px solid #0f0'});
+// $('span').parent().css({'border': '1px solid #0f0'});
+
+
+// Jquery children selector
+// $('.div-pai').children().css({'border': '1px solid #f00'});
+// $('.div-pai').find('ul:first').css({'border': '1px solid #f00'});
+// $('.div-pai').find('ul:last').css({'border': '1px solid #f00'});
+$('.div-pai li:first').find('*').css({'border': '1px solid #f00'});
+
+
+// Jquery siblings selector
+// $('.sibling-pai span h3').siblings('p').css({'border': '1px solid #f00'});
+$('.sibling-pai span h2').next().css({'border': '1px solid #f00'});
+$('.sibling-pai span h2').prev().css({'border': '1px solid #f00'});
+// prev, prevAll e prevUntil
+// next, nextAll e nextUntil
+
