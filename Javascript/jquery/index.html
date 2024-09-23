@@ -37,6 +37,30 @@
             width: 50%;
             padding: 10px;
         }
+
+        .vermelho {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+        }
+
+        .azul {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+        }
+
+        .box-animation {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            left: 0;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +165,75 @@
         </span>
     </div>
 
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="filter">
+        <p>Teste 1</p>
+        <p class="border">Teste 2</p>
+        <p>Teste 3</p>
+        <p>Teste 4</p>
+        <p class="border">Teste 5</p>
+        <p>Teste 6</p>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="text-manipulation">
+        <h2>Texto de teste 1</h2>
+        <p>Texto de teste 2</p>
+    </div>
+    <input type="text" name="value">
+    <input type="submit" class="show-text" value="Mostrar">
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <div class="box-attr vermelho">
+        <h3>Teste de texto</h3>
+        <p>Curso de jquery</p>
+    </div>
+
+    <!-- <button onclick="showBox()">Mostrar</button> -->
+    <!-- <button onclick="hideBox()">Ocultar</button> -->
+    <button id="hide-or-Show-btn" onclick="hideOrShow()">Ocultar</button>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
     
+    <div class="box-animation">
+        <p>
+            Animation box
+        </p>
+    </div>
+    
+    <button id="btn-aumentar">Aumentar</button>
+    <button id="btn-diminuir">Diminuir</button>
+    <br>
+    <button id="btn-tamanho">Aumentar / Diminuir</button>
+    <button id="btn-visibilidade">Mostrar / Ocultar</button>
+    <br>
+    <button id="btn-largura">Estender com delay</button>
+    <button id="btn-largura-e-altura">Estender e aumentar com delay</button>
+    <br>
+    <button id="btn-ocultar-com-fade">Ocultar com fade</button>
+    <button id="btn-mostrar-com-fade">Mostrar com fade</button>
+    <button id="btn-ocultar-mostrar-com-fade">Ocultar e mostrar com fade</button>
+
     <script src="../js/script.js"></script>
 </body>
 </html>

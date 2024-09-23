@@ -87,3 +87,98 @@ $('.sibling-pai span h2').prev().css({'border': '1px solid #f00'});
 // prev, prevAll e prevUntil
 // next, nextAll e nextUntil
 
+// filters first, last and eq
+$('.filter p').first().css({'border':'1px solid #f00'});
+$('.filter p').last().css({'border':'1px solid #f00'});
+$('.filter p').eq(3).css({'border':'1px solid #0f0'});
+
+$('.filter p').filter('.border').css({'color': '#f00'})
+$('.filter p').not('.border').css({'color': '#00f'})
+
+// funções de manipulção de texto (val, text, html)
+$('.text-manipulation h2').click(function () { 
+    alert(`Texto: ${$(this).text()}`)
+ })
+
+$('.text-manipulation').click(function (event) { 
+    event.stopPropagation();
+    alert(`Texto: ${$(this).html()}`);
+ })
+
+ $('input[class="show-text"]').click((event) => {
+    event.preventDefault();
+    let textValue = $('input[name="value"]').val();
+
+    alert(textValue.toUpperCase());
+ })
+
+ //modificar valores dos atributos html
+ $('.box-attr').click(function(e) {
+    if($(this).attr('class').includes('vermelho')) {
+        $(this).attr('class', 'box-attr azul');
+        return;
+    }
+
+    $(this).attr('class', 'box-attr vermelho');
+
+ })
+
+
+//  Efeitos hide() e show()
+function showBox() {
+    $('.box-attr').show();
+}
+function hideBox() {
+    $('.box-attr').hide();
+}
+
+// função toggle
+const box = $('.box-attr');
+
+function hideOrShow() {
+    box.toggle();
+    if(box.is(':visible')) {
+        $('#hide-or-Show-btn').text('Ocultar');
+    } else {
+        $('#hide-or-Show-btn').text('Mostrar');
+
+    }
+
+}
+
+// animações com animate()
+$('#btn-aumentar').click(function() {
+    $('.box-animation').animate({'width': '500px', 'height': '500px'})
+});
+$('#btn-diminuir').click(function() {
+    $('.box-animation').animate({'width': '200px'}).animate({'height': '200px'})
+});
+
+// animate com toggle
+$('#btn-tamanho').click(() => {
+    $('.box-animation').animate({width: 'toggle', height: 'toggle'})
+});
+
+$('#btn-visibilidade').click(() => {
+    $('.box-animation').animate({opacity: 'toggle'})
+});
+
+// uso do delay
+$('#btn-largura').click(() => {
+    $('.box-animation').delay(2000).animate({width: '700px'})
+})
+
+$('#btn-largura-e-altura').click(() => {
+    $('.box-animation').delay(2000).animate({width: '700px'}).delay(2000).animate({height: '500px'})
+})
+
+// fade in e fade out
+$('#btn-ocultar-com-fade').click(() => {
+    $('.box-animation').fadeOut(3000, () => alert('Item oculto'));
+})
+$('#btn-mostrar-com-fade').click(() => {
+    $('.box-animation').fadeIn(3000);
+})
+$('#btn-ocultar-mostrar-com-fade').click(() => {
+    $('.box-animation').fadeOut().delay(1000).fadeIn();
+})
